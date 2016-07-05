@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en" ng-app="main">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>个人主页</title>
+	<link href="http://cdn.bootcss.com/fullPage.js/2.7.9/jquery.fullPage.css" rel="stylesheet">
+	<link rel="stylesheet" href="iconfont/iconfont.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/swiper.min2.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/angular.js"></script>
+	<script src="js/angular-animate.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/angular-touch.js"></script>
+	<script src="js/swiper.jquery.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/swiper.min2.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+	<div class="topframe" ng-controller="logoCtrl">
+		<div class="logo">主页</div>
+			<div class="logo-wuxing logo-title">
+				<div class="iconfont icon-tripwuxingxu"></div>
+			</div>
+			<ul class="xiang" ng-show="show" id="fullpageMenu">
+				<li data-menuanchor="first"><a href="#first">首页</a></li>
+				<li data-menuanchor="zuo"><a href="#zuo">作品展示</a></li>
+				<li data-menuanchor="neng"><a href="#neng">专业技能</a></li>
+				<li data-menuanchor="me"><a href="#me">关于我</a></li>
+				<li data-menuanchor="contact"><a href="#contact">联系我</a></li>
+			</ul>
+            <div class="logo-xiala logo-title" ng-click="show=!show" ng-init="show=false">
+				<div class="iconfont icon-xiala"></div>
+			</div>
+		</div>
+	</div>
+	<div id="fullpage">
+		<div class="section" id="first">
+			<h1 class="wel"></h1>
+			<h2>WELCOME</h2>
+			<a class="go" id="goto">
+				<img src="images/button_downr.png" alt="" class="dow">
+			</a>
+			<div class="circle"></div>
+		</div>
+		<div class="section" id="zuo">
+            <div class="wrapper">
+            	<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				    	<a href="http://www.nanshan.com" class="swiper-slide" style="background-image:url(images/nanshan.png)">
+				        	<div class="back">
+				        		<span class="biand">南山</span>
+				        	</div>
+				        </a>
+				        <a href="./saolei" class="swiper-slide" style="background-image:url(images/lei.png)">
+				        	<div class="back">
+				        		<span class="biand">扫雷</span>
+				        	</div>				     	
+				        </a>
+				        <a href="./yin" class="swiper-slide" style="background-image:url(images/yintai.png)">
+				        	<div class="back">
+				        		<span class="biand">银泰</span>
+				        	</div>
+				        </a>
+				        <a href="./snake" class="swiper-slide" style="background-image:url(images/she.png)">
+				        	<div class="back">
+				        		<span class="biand">贪吃蛇</span>
+				        	</div>
+				        </a>
+				        <a href="./yidong" class="swiper-slide" style="background-image:url(images/yidong.png)">
+				        	<div class="back">
+				        		<span class="biand">仿移动</span>
+				        	</div>
+				        </a>
+				        <a href="./biao" class="swiper-slide" style="background-image:url(images/biao.png)">
+				        	<div class="back">
+				        		<span class="biand">钟表</span>
+				        	</div>
+				        </a>
+				        <a href="./jingdong" class="swiper-slide" style="background-image:url(images/jingdong.png)">
+				        	<div class="back">
+				        		<span class="biand">仿京东</span>
+				        	</div>
+				        </a>
+				        <a href="./dazi" class="swiper-slide" style="background-image:url(images/dazi.png)">
+				        	<div class="back">
+				        		<span class="biand">打字</span>
+				        	</div>
+				        </a>
+				        <a href="./dangdang" class="swiper-slide" style="background-image:url(images/dang.png)">
+				        	<div class="back">
+				        		<span class="biand">当当</span>
+				        	</div>
+				        </a>
+				        <a href="./wuziqi" class="swiper-slide" style="background-image:url(images/wuziqi.png)">
+				        	<div class="back">
+				        		<span class="biand">五子棋</span>
+				        	</div>
+				        </a>
+				        <a href="./baiwei" class="swiper-slide" style="background-image:url(images/baidu.png)">
+				        	<div class="back">
+				        		<span class="biand">仿百度</span>
+				        	</div>
+				        </a>
+				        <a href="./todo" class="swiper-slide" style="background-image:url(images/todos.png)">
+				        	<div class="back">
+				        		<span class="biand">todos</span>
+				        	</div>
+				        </a>
+				        <a href="./iphones" class="swiper-slide" style="background-image:url(images/apple.png)">
+				        	<div class="back">
+				        		<span class="biand">apple</span>
+				        	</div>
+				        </a>
+				        <a href="./sina" class="swiper-slide" style="background-image:url(images/xinlang.png)">
+				        	<div class="back">
+				        		<span class="biand">新浪</span>
+				        	</div>
+				        </a>
+				    </div>   
+			        <!-- Add Pagination -->
+			        <div class="swiper-pagination"></div>
+			    </div>
+			    <script>
+				    var swiper = new Swiper('.swiper-container', {
+				        pagination: '.swiper-pagination',
+				        effect: 'coverflow',
+				        grabCursor: true,
+				        centeredSlides: true,
+				        slidesPerView: 'auto',
+				        coverflow: {
+				            rotate: 50,
+				            stretch: 0,
+				            depth: 100,
+				            modifier: 1,
+				            slideShadows : true,
+				        }
+				    });
+				</script>
+            </div>
+            <div class="wrapper2">
+            	<div class="swiper-container" id="swiper-container2">
+			        <div class="swiper-wrapper">
+				        <a href="./nanshan" class="swiper-slide" style="background-image:url(images/lei.png)">
+				        	<p>扫雷</p>
+				        </a>
+				        <a href="./yint" class="swiper-slide" style="background-image:url(images/yintai.png)">
+				        	<p>银泰</p>
+				        </a>
+				        <a href="./snake" class="swiper-slide" style="background-image:url(images/she.png)">
+				        	<p>贪吃蛇</p>
+				        </a>
+				        <a href="./yidong" class="swiper-slide" style="background-image:url(images/yidong.png)">
+				        	<p>仿移动</p>
+				        </a>
+				        <a href="./biao" class="swiper-slide" style="background-image:url(images/biao.png)">
+				        	<p>钟表</p>
+				        </a>
+				        <a href="./jingdong" class="swiper-slide" style="background-image:url(images/jingdong.png)">
+				        	<p>仿京东</p>
+				        </a>
+				        <a href="./dazi" class="swiper-slide" style="background-image:url(images/dazi.png)">
+				        	<p>打字</p>
+				        </a>
+				        <a href="./dangdang" class="swiper-slide" style="background-image:url(images/dang.png)">
+				        	<p>当当</p>
+				        </a>
+				        <a href="./wuziqi" class="swiper-slide" style="background-image:url(images/wuziqi.png)">
+				        	<p>五子棋</p>
+				        </a>
+				        <a href="./baiwei" class="swiper-slide" style="background-image:url(images/baidu.png)">
+				        	<p>仿百度</p>
+				        </a>
+				        <a href="./todo" class="swiper-slide" style="background-image:url(images/todos.png)">
+				        	<p>todos</p>
+				        </a>
+				        <a href="./iphones" class="swiper-slide" style="background-image:url(images/apple.png)">
+				        	<p>apple</p>
+				        </a>
+				        <a href="./sina" class="swiper-slide" style="background-image:url(images/xinlang.png)">
+				        	<p>新浪</p>
+				        </a>
+				    </div>
+			    </div>
+			    <script>
+			     var swiper2 = new Swiper('#swiper-container2', {
+			        effect: 'flip',
+			        grabCursor: true,
+			    })
+			    </script>
+            </div>
+		</div>
+		<div class="section" id="neng">
+			<h2 class="skillp">Professional Skills</h2>
+			<div class="skill-bo">
+				<div class="all-logo">
+					<div class="ci ci1"><img src="images/ps.png" alt="" class="neng-t"></div>
+					<div class="ci ci2"><img src="images/ai.png" alt="" class="neng-t"></div>
+					<div class="ci ci3"><img src="images/css.png" alt="" class="neng-t"></div>
+					<div class="ci ci4"><img src="images/html.png" alt="" class="neng-t"></div>
+					<div class="ci ci5"><img src="images/jquery.png" alt="" class="neng-t"></div>
+					<div class="ci ci6"><img src="images/ajax.png" alt="" class="neng-t"></div>
+					<div class="ci ci7" id="an"><img src="images/angular.png" alt=""></div>
+				</div>
+			</div>
+		</div>
+		<div class="section" id="me">
+			<h2 class="skill">About me</h2>
+			<div class="kuana">
+				<div class="kuank">
+					<div class="kuan">
+						<div class="tu">
+							<img src="images/3.jpg" alt="" class="me-tu">
+						</div>
+					</div>
+				</div>
+				<div class="miao">
+					<h2 class="shu"></h2>
+				</div>
+			</div>
+			<div class="yuan">
+				<img src="images/3.jpg" alt="" class="yuan-tu">
+			</div>
+		</div>
+		<div class="section" id="contact">
+			<h2 class="skill">Contact me</h2>
+			<div class="con">
+				<div class="dizi conj">
+					<img src="images/lianxi.png" alt="">
+					<span>18334795134</span>
+				</div>
+				<div class="dizi conj">
+					<img src="images/email.png" alt="">
+					<span>2232266492@qq.com</span>
+				</div>
+				<div class="dizi conj">
+					<img src="images/dizhi.png" alt="">
+					<span>山西太原万柏林区</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
